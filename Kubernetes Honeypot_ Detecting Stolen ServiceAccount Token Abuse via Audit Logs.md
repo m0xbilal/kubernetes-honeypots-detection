@@ -84,7 +84,7 @@ Create a ServiceAccount that no legitimate workload should ever touch — and al
 
 ---
 
-##  ** Create a Honeypot Namespace**
+##  **Create a Honeypot Namespace**
 
 `kubectl create namespace honeypot`
 
@@ -92,7 +92,7 @@ This keeps all decoys isolated and easy to monitor.
 ![Screenshot](images/image%20%288%29.png)
 ---
 
-##  ** Create a Decoy ServiceAccount**
+##  **Create a Decoy ServiceAccount**
 
 `apiVersion: v1`  
 `kind: ServiceAccount`  
@@ -167,7 +167,7 @@ This mimics **real-world secret leakage**.
 
 ---
 
-##  ** Ensure the ServiceAccount Has NO Permissions**
+##  **Ensure the ServiceAccount Has NO Permissions**
 
 `kubectl auth can-i --list \`  
   `--as=system:serviceaccount:honeypot:backup-sa`
